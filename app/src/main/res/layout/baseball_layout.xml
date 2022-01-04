@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Home"
+                style="@style/HeaderText"/>
+
+            <TextView
+                android:id="@+id/home_score"
+                android:text="0"
+                style="@style/HeaderText"/>
+
+
+            <Button
+                android:text="+1"
+                android:onClick="homePlusOne"
+                style="@style/CenteredButton"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Away"
+                style="@style/HeaderText"/>
+
+            <TextView
+                android:id="@+id/away_score"
+                android:text="0"
+                style="@style/HeaderText"/>
+
+
+            <Button
+                android:text="+1"
+                android:onClick="awayPlusOne"
+                style="@style/CenteredButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:text="Out"
+            android:onClick="addOut"
+            style="@style/CenteredButton"/>
+
+        <ImageView
+            android:id="@+id/outs_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_outs"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:text="Reset"
+            android:onClick="resetScores"
+            style="@style/CenteredButton"/>
+
+        <Button
+            android:text="Share"
+            android:onClick="shareScores"
+            style="@style/CenteredButton"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
